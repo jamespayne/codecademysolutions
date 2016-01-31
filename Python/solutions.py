@@ -5,7 +5,7 @@ def reverse(text):
     output = ''
     counter = textlength-1
     for char in range(textlength,0,-1):
-        print counter
+        # print counter
         output += text[counter]
         counter -= 1
     return output
@@ -21,7 +21,7 @@ def anti_vowel(text):
     return output
 anti_vowel("Catepillar")
 
-Function to find a scrabble word score total
+# Function to find a scrabble word score total
 
 score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2,
          "f": 4, "i": 1, "h": 4, "k": 5, "j": 8, "m": 3,
@@ -65,7 +65,7 @@ def purify(content):
     results = []
     for item in content:
         if item % 2 == 0:
-            print "Found item"
+            # print "Found item"
             results.append(item)
     return results
 
@@ -83,10 +83,40 @@ product([3,3,5])
 # Removes duplicate values from a list
 
 def remove_duplicates(values):
-    print values
+    # print values
     results = []
     for item in values:
         if item not in results:
             results.append(item)
     return results
 remove_duplicates([1,1,2,2])
+
+# Find the median of a list
+
+def median(values):
+    values.sort()
+    print values
+    middle = len(values)/2
+    # print values[middle]
+    # Set up global variables
+
+    even = False
+    result = 0
+
+    # Check to see if the list has a odd or even number # of values.
+
+    if len(values) % 2 == 0:
+        even = False
+    else:
+        even = True
+
+    # If the list has an odd number of values, just get
+    # the middle number from the list
+
+    if even == False:
+        total = values[middle-1]+values[middle]
+        result = total/2.0
+    else:
+        result = values[middle]
+    return result
+median([7,3,1,6])
