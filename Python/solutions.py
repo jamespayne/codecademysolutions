@@ -100,23 +100,13 @@ def median(values):
     # print values[middle]
     # Set up global variables
 
-    even = False
     result = 0
 
-    # Check to see if the list has a odd or even number # of values.
+    # Check to see if the list has a odd or even number # of values and make the calculations.
 
     if len(values) % 2 == 0:
-        even = False
-    else:
-        even = True
-
-    # If the list has an odd number of values, just get
-    # the middle number from the list
-
-    if even == False:
-        total = values[middle-1]+values[middle]
-        result = total/2.0
+        result = (values[middle-1]+values[middle])/2.0
     else:
         result = values[middle]
-    return result
+    print result
 median([7,3,1,6])
