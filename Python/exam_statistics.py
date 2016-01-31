@@ -16,3 +16,8 @@ def grades_sum(scores):
         total += score
     return total
 # print grades_sum(grades)
+
+def grades_average(grades):
+    total = grades_sum(grades)
+    return total/float(len(grades))
+# print grades_average(grades)
