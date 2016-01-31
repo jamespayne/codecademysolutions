@@ -21,3 +21,13 @@ def grades_average(grades):
     total = grades_sum(grades)
     return total/float(len(grades))
 # print grades_average(grades)
+
+# --Calculates the grade variance--
+
+def grades_variance(scores):
+    average = grades_average(scores)
+    variance = 0
+    for score in scores:
+        variance += (average - score) ** 2
+    return variance/len(scores)
+print grades_variance(grades)
